@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Lato-Light;
+    src: url('../fonts/Lato-Light.ttf');
+}
+
+body {
+    background-color: white;
+    font-family: Lato-Light;
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px;
+    padding: 0;
+}
+
+input {
+    font-family: Lato-Light;
+}
+
+input:focus {
+    outline:none;
+}
+
+#main_search {
+    height: 50px;
+    font-size: 24px;
+    padding: 5px;
+    width: 50%;
+    vertical-align: middle;
+}
+
+button {
+    border: none;
+    background:none;
+    font-family: Lato-Light;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+#main_btn {
+    height: 30px;
+    background-color: #c0392b;
+    vertical-align: middle;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    text-align: center;
+}
+
+#content {
+    /* background-image: url('../images/bg.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+/*------------------- INDEX ---------------------- */
+#nav_bar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+#right_side {
+    color: white;
+    background-image: url('../images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#footer {
+    background-color: #2c3e50;
+    color: white;
+}
+
+#login_btn {
+    border: 3px solid white;
+    background: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+/*-----------------------------------------*/
+#search_bar {
+    height: 50px;
+    width: 70%;
+}
+
+#search_result_title {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------- */
+#thesis_detail {
+    text-align: left;
+}
+
+#abstract {
+    text-align: justify;
+}
+
+/* ---------------REGISTER ----------------------- */
+.basic_input {
+    padding: 10px;
+    font-size: 24px;
+    margin: 5px;
+}

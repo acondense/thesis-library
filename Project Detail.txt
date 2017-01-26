@@ -1,0 +1,13 @@
+thesisDetails
+------------------
+thesisTitle 
+thesisAuthors
+datePublished
+thesisAbstract
+
+
+usersTable
+----------------
+username
+password
+role
