@@ -24,7 +24,7 @@
         header("Location: welcome.php");
     } else {
         echo "LOGIN FAIL";
-        header("Location: index.html"); // returns to login
+        header("Location: index.php"); // returns to login
     }
 
 

@@ -25,7 +25,7 @@
         '$student_no')";
 
     if (mysqli_query($link, $query)) {
-        header("Location: welcome.html");
+        header("Location: welcome.php");
         echo "SUCCESS";
     } else {
         // echo $_POST['password'];
