@@ -1,24 +1,12 @@
 <?php
 
     require('connection.php');
-    session_start();
+    if (!isset($_SESSION))
+        session_start();
 
-    if (isset($_SESSION['role'])) {
+    $userid = $_SESSION['id'];
 
-    } else {
-
-        // Header("Location: index.php");
-    }
-
-    $to_search = strtoupper($_GET['query']);
-
-    $tokens = str_replace(" ", "|", $to_search);
-
-    $query = "SELECT * FROM tblthesis
-        WHERE upper(thesisTitle) REGEXP '$tokens'  
-        OR upper(authors) REGEXP '$tokens'
-        OR upper(datePublished) REGEXP '$tokens'
-        OR upper(abstract) REGEXP '$tokens'";
+    $query = "SELECT * FROM tblthesis WHERE userid='$userid'"; 
 
     $results = mysqli_query($link, $query);
 ?>
@@ -40,20 +28,11 @@
         
         <?php require('components/nav-bar.php'); ?>
 
+        <?php require('components/user-data.php'); ?>
+
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <div class="box">
-                    <br /><br />
-                    <h1>Search results for "<?php echo $_GET['query']?>"
-                    </h1>
-                    <form method="get" action="search.php">
-                        <input class="form-control"  id="main_search" name="query" placeholder="Search for ..."
-                            value=<?php echo "\"" .$_GET['query'] ."\"" ?>
-                        />
-                        <br />
-                        <input class="btn btn-primary btn-lg" id="main_btn" type="Submit" value="Search" />
-                    </form>
-                </div>
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Your theses</h3>
             </div>
         </div>
 
@@ -72,7 +51,7 @@
             } else {
                 echo "<div class='row'>";
                 echo "<div class='col-md-6 col-md-offset-3'>";
-                echo "<h1>No results found for \"" .$_GET['query'] ."\"</h1>";
+                echo "<h1>You don't have any uploaded thesis yet.</h1>";
                 echo "</div>";
                 echo "</div>";
             }

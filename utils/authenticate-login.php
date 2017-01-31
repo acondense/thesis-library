@@ -1,6 +1,6 @@
 <?php 
 
-    require('connection.php');
+    require('../connection.php');
 
     $email = $_POST['login_email'];
     $password = $_POST['login_password'];
@@ -14,26 +14,15 @@
         // there are results in $result
         session_start();
 
+        $_SESSION['id'] = $row['id'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['firstname'] = $row['firstname'];
         $_SESSION['lastname'] = $row['lastname'];
-        $_SESSION['student_no'] = $row['student_no'];
-        $_SESSION['role'] = $row['role'];
 
         echo "LOGIN SUCCESS";
-        header("Location: welcome.php");
+        header("Location: ../index.php");
     } else {
         echo "LOGIN FAIL";
         header("Location: index.php"); // returns to login
     }
-
-
-
-
-
-
-
-
-
-
 ?>

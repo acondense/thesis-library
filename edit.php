@@ -1,3 +1,15 @@
+<?php
+
+    require('connection.php');
+
+    $thesisid = $_GET['id'];
+    $query = "SELECT * FROM tblthesis WHERE id='$thesisid'";
+    $results = mysqli_query($link, $query);
+    $result = mysqli_fetch_array($results);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,31 +36,41 @@
             <div class="col-md-6 col-md-offset-3 text-center">
                 <br />
 
-                <form method="post" action="utils/authenticate-add.php">
+                <form method="post" action="utils/authenticate-edit.php">
 
                     <div class="form-group text-left">
                         <label for="formGroupExampleInput">Title</label>
-                        <input type="text" class="form-control bold" name="add_title" placeholder="Title">
+                        <input type="text" class="form-control bold" name="edit_title" placeholder="Title"
+                            value=
+                                <?php echo "\"" .$result['thesisTitle'] ."\""; ?>
+                            >
                     </div>
 
                     <div class="form-group text-left">
                         <label for="formGroupExampleInput">Authors</label>
-                        <input type="text" class="form-control bold" name="add_authors" placeholder="Authors">
+                        <input type="text" class="form-control bold" name="edit_authors" placeholder="Authors"
+                            value=
+                                <?php echo "\"" .$result['authors'] ."\""; ?>
+                            >
                     </div>
 
                     <div class="form-group text-left">
                         <label for="formGroupExampleInput">Date Published</label>   
-                        <input type="text" class="form-control bold" name="add_date" placeholder="Date Published">
+                        <input type="text" class="form-control bold" name="edit_date" placeholder="Date Published"
+                            value=
+                                <?php echo "\"" .$result['datePublished'] ."\""; ?>
+                            >
                     </div>
 
                     <div class="form-group text-left">
                         <label for="formGroupExampleInput">Abstract</label>
-                        <textarea class="form-control" placeholder="Abstract" name="add_abstract" rows="10"></textarea>
-
+                        <textarea class="form-control" placeholder="Abstract" name="edit_abstract" rows="10"><?php echo $result['abstract']; ?>
+                        </textarea>
                     </div>
 
+                    <input hidden name="thesisid" value='<?php echo $thesisid; ?>' />
                     
-                    <button type="submit" class="btn btn-info btn-block">Add Thesis</button>
+                    <button type="submit" class="btn btn-info btn-block">Save</button>
                     <br /><br /><br />
                 </form>
 
