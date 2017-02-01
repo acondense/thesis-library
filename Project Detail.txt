@@ -11,3 +11,17 @@ usersTable
 username
 password
 role
+
+
+PHPmyadmin
+https://xo1.x10hosting.com:2083/cpsess8859201263/3rdparty/phpMyAdmin/import.php
+
+Site
+http://pupee.x10.bz
+
+admin control
+http://pupee.x10.bz/admin/index.php
+
+ADMIN ACCOUNT:
+admin@pupee.x10.bz
+PUPMANILA

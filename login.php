@@ -19,7 +19,7 @@
 
                 <form method="post" action="utils/authenticate-login.php">
                     <label for="login_email">Email: </label>
-                    <input class="form-control" name="login_email" placeholder="Email" required/>
+                    <input type="email" class="form-control" name="login_email" placeholder="Email" required/>
 
                     <br />
         
