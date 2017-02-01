@@ -13,7 +13,7 @@
 
         "<button class='btn btn-info' onClick='window.location=\"login.php\"'>Log in as Faculty</button>";
 
-        if (isset($_SESSION['id']) && $_SESSION['id'] == $result['userid']) {
+        if ($result['id'] == $thesisid) {
             echo'<br /><br /><br />';
             echo'<div class="row">';
             echo'    <div class="col-md-3 col-md-offset-3">';
@@ -22,7 +22,7 @@
                 .'\'">Edit this thesis</button>';
             echo'    </div>';
             echo'    <div class="col-md-3">';
-            echo'        <button class="btn btn-block btn-danger" onClick="window.location=\'utils/authenticate-delete.php?id=' 
+            echo'        <button class="btn btn-block btn-danger" onClick="window.location=\'authenticate-delete.php?id=' 
                 .$thesisid 
                 .'\'">Delete</button>';
             echo'    </div>';

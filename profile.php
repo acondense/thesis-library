@@ -4,6 +4,8 @@
     if (!isset($_SESSION))
         session_start();
 
+    require('utils/check-if-login.php');
+
     $userid = $_SESSION['id'];
 
     $query = "SELECT * FROM tblthesis WHERE userid='$userid'"; 

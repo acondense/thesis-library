@@ -7,10 +7,10 @@
 
 <div class="row" id="nav_bar">
     <div class="col-md-3 text-right">
-        <img class="center" src="images/logo_ce.jpg" width="100px" />
+        <img onClick='window.location="index.php"' class="center" src="images/logo_ce.jpg" width="100px" />
     </div>
     <div class="col-md-6">
-        <h1>PUPEE Thesis Library</h1>
+        <h1 onClick='window.location="index.php"'>PUPEE Thesis Library</h1>
     </div>
     <div class="col-md-3 text-left">  
         <br />

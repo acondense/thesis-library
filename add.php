@@ -1,3 +1,7 @@
+<?php 
+    require('utils/check-if-login.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

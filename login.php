@@ -19,12 +19,12 @@
 
                 <form method="post" action="utils/authenticate-login.php">
                     <label for="login_email">Email: </label>
-                    <input class="form-control" name="login_email" placeholder="Email" />
+                    <input class="form-control" name="login_email" placeholder="Email" required/>
 
                     <br />
         
                     <label for="login_password">Password: </label>
-                    <input class="form-control" type="pasword" name="login_password" placeholder="Password" />
+                    <input class="form-control" type="password" name="login_password" placeholder="Password" required/>
 
                     <br />
                     <input type="submit" class="btn btn-block btn-info" value="Log in" />

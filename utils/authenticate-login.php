@@ -5,7 +5,7 @@
     $email = $_POST['login_email'];
     $password = $_POST['login_password'];
 
-    $query = "SELECT * FROM tblusers WHERE email='$email' AND password='$password' LIMIT 1";
+    $query = "SELECT * FROM tblusers WHERE email='$email' AND password='$password' AND status='ACTIVE' AND role='F' LIMIT 1";
 
     $result = mysqli_query($link, $query);
 
@@ -23,6 +23,6 @@
         header("Location: ../index.php");
     } else {
         echo "LOGIN FAIL";
-        header("Location: index.php"); // returns to login
+        header("Location: ../index.php"); // returns to login
     }
 ?>
